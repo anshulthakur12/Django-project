@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <!-- Content -->
+      <div class="single-page-section">
+        <h3 class="margin-bottom-25">Job Description</h3>
+           {% autoescape off %}{{description | linebreaks }}{% endautoescape %}
+          <div style="margin-top:35px">
+           <div class="job-listing">
+          <!-- Job Listing Details -->
+             <div class="job-listing-details">
+                <div class="job-listing-description">
+                  <li>
+                    <p1>Company - {{company}}</p1>
+                  </li>
+
+                  <li>
+                    <p1>Location - {{job_location}}</p1>
+                  </li>
+
+                  <li>
+                    <p1>Qualification - {{qualification}}</p1>
+                  </li>
+                </div>
+             </div>
+          </div>
+           </div>
+          </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+          <div class="col-12 listings-container compact-list-layout" style="margin:90px 0">
+            <h6>Welcome to Index</h6>
+            <a href="{% url 'main:registration' %}"> GO to Registration Page</a>
+             {{data}}
+          </div>
+      </div>
+    </div>
+ </div>
+{% endblock %}

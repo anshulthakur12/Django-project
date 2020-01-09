@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block content %}
+    <div class= "jumbotron">
+    {% if registered %}
+        <p1>Thank you for register</p1>
+        <a href="{% url 'main:user_login' %}">LOGIN</a>
+        {% else %}
+        <h6>Register Here!</h6>
+        <h6>Fill out the form </h6>
+         <form  method="post">
+            {% csrf_token %}
+              {{ user_form.as_p }}
+             {{ profile_form.as_p }}
+            <input type="submit" name="" value="Register">
+         </form>
+    {% endif %}
+
+  You have an account <a href="/login" target="blank"><strong>login</strong></a> click
+</div>
+{% endblock %}

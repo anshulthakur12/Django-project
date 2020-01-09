@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% block content %}
+    <h1>This is django-project part two</h1>
+    <h2>All access record here </h2>
+    <div class="django-two">
+        {% if access_record %}
+            <table>
+                <thead>
+                    <th>Site Name </th>
+                    <th>Date Accessed </th>
+                </thead>
+            {% for acc in access_record %}
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+
+        {% else %}
+            <p>NO ACCESS RECORD FUND </p>
+        {% endif %}
+    </div>
+{% endblock %}
+
